@@ -1,3 +1,8 @@
+# What's this
+This is a modified version of the [ESP's example](https://github.com/espressif/esp-idf/tree/master/examples/storage/sd_card/sdmmc) showing how to read an SD card.
+
+What's added is the lib for reading and writing INI files [minIni](https://github.com/compuphase/minIni).
+
 # SD Card example
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
