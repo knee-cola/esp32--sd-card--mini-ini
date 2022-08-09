@@ -16,5 +16,6 @@
     "stat.h": "c",
     "esp_err.h": "c"
   },
-  "idf.adapterTargetName": "esp32"
+  "idf.adapterTargetName": "esp32",
+  "idf.portWin": "COM6"
 }
