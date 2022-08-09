@@ -173,13 +173,18 @@ void app_main(void)
     // string reading
     ESP_LOGI(TAG, "Reading ini");
 
-    iniValueLength = ini_gets("first", "string", "dummy", iniValue, sizearray(iniValue), inifile);
+    iniValueLength = ini_gets("first", "key_a", "default value for string", iniValue, sizearray(iniValue), inifile);
 
-    ESP_LOGI(TAG, "iniValueLength=%lu", iniValueLength);
-    ESP_LOGI(TAG, "iniValue=%s", iniValue);
+    ESP_LOGI(TAG, "iniValueLength[key_a]=%lu", iniValueLength);
+    ESP_LOGI(TAG, "iniValue[key_a]=%s", iniValue);
+
+    iniValueLength = ini_gets("first", "key_b", "default value for key_b", iniValue, sizearray(iniValue), inifile);
+
+    ESP_LOGI(TAG, "iniValueLength[key_b]=%lu", iniValueLength);
+    ESP_LOGI(TAG, "iniValue[key_b]=%s", iniValue);
 
     /* string writing */
-    iniValueLength = ini_puts("first", "alt", "flagged as \"correct\"", inifile);
+    iniValueLength = ini_puts("first", "key_b", "flagged as \"correct\"", inifile);
 
 
 /*
